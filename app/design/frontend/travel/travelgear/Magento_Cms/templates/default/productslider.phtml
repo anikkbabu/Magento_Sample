@@ -1,0 +1,464 @@
+
+  <meta charset="UTF-8">
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    .slider {
+        width: 100%;
+        margin: 100px auto;
+    }
+     .col-md-12.productpick {
+          font: 14px/1.55;
+          font-weight: 300;
+          text-align: center;
+          font-family: 'Oswald';
+          font-size: 12px;
+      }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+    .slick-prev {
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+    top: 10%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    float: right;
+    margin-top: -3%;
+}
+    .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin-top: -3%;
+    right: 7px;
+}
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: 1;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+    .middle {
+      opacity: 0;
+      position: absolute;
+      top: 37%;
+       -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: .3s ease;
+        transition: .3s ease;
+      text-align: center;
+    }
+
+    .col-md-12.productpick:hover .thumb-wrapper {
+      opacity: 0.3;
+    }
+
+    .col-md-12.productpick:hover .middle {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+    }
+    .col-md-12.productpick:hover .productact {
+      opacity: 1;
+      height: 20%;
+    }
+     button.btn-wishlist:hover {
+       background-position: left -40px !important;
+    }
+    button.btn-quickview:hover {
+       background-position: left -40px !important;
+    }
+    button.btn-compare:hover {
+       background-position: left -40px !important;
+    }
+    h5.prohead:hover {
+       color: #d90036;
+    }
+    li.list-inline-item {
+    color: #d90036;
+     }
+      span.priceor {
+    color: #d90036;
+    font-weight: 700;
+     }
+
+    .setcolor {
+      background-color:#d90036;
+      color: white;
+      border: none;
+      padding: 11px 28px;
+    }
+    .col-md-12.productpick{
+      border: 2px solid #f3f3f3;
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+    .productact {
+      opacity: 0;
+      background-color: #f8f8f8;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      display: block;
+      height: 50px;
+      position: absolute;
+      text-align:center;
+      transition: .5s ease;
+      left: 50%;
+      margin-top: -3%;
+    }
+    .slick-slide {
+    margin:0px 0px;
+    }
+    ul.list-inline {
+    color: grey;
+    }
+    button.button.btn-wishlist {
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    float: none;
+    height: 40px;
+    margin: 0 3px;
+    text-indent: -999em;
+    width: 40px;
+}
+    button.button.btn-quickview {
+        border: 0;
+        cursor: pointer;
+        display: inline-block;
+        float: none;
+        height: 40px;
+        margin: 0 3px;
+        text-indent: -999em;
+        width: 40px;
+    }
+    button.button.btn-compare {
+        border: 0;
+        cursor: pointer;
+        display: inline-block;
+        float: none;
+        height: 40px;
+        margin: 0 3px;
+        text-indent: -999em;
+        width: 40px;
+    }
+    .img-box {
+    height: 300px;
+    }
+    .thumb-content {
+    height: 100px;
+     }
+     .thumb-wrapper {
+    height: 400px;
+     }
+    span.productnew {
+    float: left;
+    background-color: #00aeef;
+    color: #fff;
+    font-family: Arial;
+    font-size: 11px;
+    height: 22px;
+    left: 0px;
+    line-height: 22px;
+    padding: 0 12px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0px;
+    width: auto;
+    }
+    span.producthot {
+    float: left;
+    background-color: #d90036;
+    color: #fff;
+    font-family: Arial;
+    font-size: 11px;
+    height: 22px;
+    left: 0px;
+    line-height: 22px;
+    padding: 0 12px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0px;
+    width: auto;
+    }
+    span.productsales {
+    float: left;
+    background-color: #5fb928;
+    color: #fff;
+    font-family: Arial;
+    font-size: 11px;
+    height: 22px;
+    left: 0px;
+    line-height: 22px;
+    padding: 0 12px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0px;
+    width: auto;
+    }
+    h5.prohead {
+    font-weight: bold;
+    font-size: 14px;
+    }
+
+   
+   /* bannersli*/
+  </style>
+  <section class="regular slider">
+    <div class="col-md-12 productpick">
+      <div class="thumb-wrapper">
+        <div class="img-box">
+           <span class="productnew">NEW</span>
+          <img src="<?php echo $this->getViewFileUrl('Magento_Cms::images/222.png'); ?>" class="img-fluid1" alt="">
+        </div>
+        <div class="thumb-content">
+          <h5 class="prohead">Aliquam pharetra</h5>
+          <p class="item-price"><strike>$400.00</strike> <span class="priceor">$369.00</span></p>
+          <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+        </div>            
+      </div>
+      <div class="col-md-12 middle">
+        <button type="button" class="setcolor">
+            <i class="fa fa-shopping-cart "><g style="font-family: sans-serif;font-weight: 600;font-size: 11px;" > ADD TO CART<g></i>
+        </button>
+       </div>
+      <div class="col-md-12 productact">
+          <button class="button btn-wishlist" >&nbsp;</button>  
+           <button class="button btn-quickview"  >&nbsp;</button>   
+            <button class="button btn-compare"  >&nbsp;</button>      
+      </div>
+    </div>
+    <div class="col-md-12 productpick">
+      <div class="thumb-wrapper">
+         <span class="producthot">HOT</span>
+          <div class="img-box">
+            <img src="<?php echo $this->getViewFileUrl('Magento_Cms::images/2_1.png'); ?>" class="img-fluid" alt="">
+          </div>
+          <div class="thumb-content">
+            <h5 class="prohead">Aliquam pharetra</h5>
+            <p class="item-price"><strike>$400.00</strike> <span class="priceor">$369.00</span></p>
+            <div class="star-rating">
+              <ul class="list-inline">
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+              </ul>
+            </div>
+          </div>            
+        </div>
+        <div class="col-md-12 middle">
+        <button type="button" class="setcolor">
+            <i class="fa fa-shopping-cart "><g style="font-family: sans-serif;font-weight: 600;font-size: 11px;" > ADD TO CART<g></i>
+        </button>
+       </div>
+      <div class="col-md-12 productact">
+          <button class="button btn-wishlist">&nbsp;</button>  
+           <button class="button btn-quickview"  >&nbsp;</button>   
+            <button class="button btn-compare"  >&nbsp;</button>      
+      </div>
+    </div>
+    <div class="col-md-12 productpick">
+      <div class="thumb-wrapper">
+         <span class="productsales">SALES</span>
+        <div class="img-box">
+          <img src="<?php echo $this->getViewFileUrl('Magento_Cms::images/7-2.png'); ?>" class="img-fluid" alt="">
+        </div>
+        <div class="thumb-content">
+          <h5 class="prohead">Aliquam pharetra</h5>
+          <p class="item-price"><span class="price-label">Starting at:</span> <span class="priceor">$369.00</span></p>
+          <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+        </div>            
+      </div>
+      <div class="col-md-12 middle">
+        <button type="button" class="setcolor">
+            <i class="fa fa-shopping-cart "><g style="font-family: sans-serif;font-weight: 600;font-size: 11px;" > ADD TO CART<g></i>
+        </button>
+       </div>
+      <div class="col-md-12 productact">
+          <button class="button btn-wishlist"  >&nbsp;</button>  
+           <button class="button btn-quickview" >&nbsp;</button>   
+            <button class="button btn-compare"  >&nbsp;</button>      
+      </div>
+    </div>
+    <div class="col-md-12 productpick">
+      <div class="thumb-wrapper">
+        <div class="img-box">
+          <img src="<?php echo $this->getViewFileUrl('Magento_Cms::images/16.png'); ?>" class="img-fluid" alt="">
+        </div>
+        <div class="thumb-content">
+         <h5 class="prohead">Aliquam pharetra</h5>
+          <p class="item-price"><span class="price-label">From:</span> <span class="priceor">$369.00</span></p>
+          <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+        </div>            
+      </div>
+      <div class="col-md-12 middle">
+        <button type="button" class="setcolor">
+            <i class="fa fa-shopping-cart "><g style="font-family: sans-serif;font-weight: 600;font-size: 11px;" > ADD TO CART<g></i>
+        </button>
+       </div>
+      <div class="col-md-12 productact">
+          <button class="button btn-wishlist"  >&nbsp;</button>  
+           <button class="button btn-quickview" >&nbsp;</button>   
+            <button class="button btn-compare" >&nbsp;</button>      
+      </div>
+    </div>
+    <div class="col-md-12 productpick">
+      <div class="thumb-wrapper">
+          <div class="img-box">
+          <img src="<?php echo $this->getViewFileUrl('Magento_Cms::images/222.png'); ?>" class="img-fluid" alt="">
+          </div>
+          <div class="thumb-content">
+            <h5 class="prohead">Aliquam pharetra</h5>
+            <p class="item-price"><strike>$400.00</strike> <span class="priceor">$369.00</span></p>
+            <div class="star-rating">
+              <ul class="list-inline">
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+              </ul>
+            </div>
+          </div>            
+        </div>
+        <div class="col-md-12 middle">
+        <button type="button" class="setcolor">
+            <i class="fa fa-shopping-cart "><g style="font-family: sans-serif;font-weight:600;font-size: 11px;" > ADD TO CART<g></i>
+        </button>
+       </div>
+      <div class="col-md-12 productact">
+          <button class="button btn-wishlist"  >&nbsp;</button>  
+           <button class="button btn-quickview"  >&nbsp;</button>   
+            <button class="button btn-compare"  >&nbsp;</button>      
+      </div>
+    </div>
+    <div class="col-md-12 productpick">
+      <div class="thumb-wrapper">
+        <div class="img-box">
+          <img src="<?php echo $this->getViewFileUrl('Magento_Cms::images/222.png'); ?>" class="img-fluid" alt="">
+        </div>
+        <div class="thumb-content">
+          <h5 class="prohead">Aliquam pharetra</h5>
+          <p class="item-price"><strike>$400.00</strike> <span class="priceor">$369.00</span></p>
+          <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+        </div>            
+      </div>
+      <div class="col-md-12 middle">
+        <button type="button" class="setcolor">
+            <i class="fa fa-shopping-cart "><g style="font-family: sans-serif;font-weight: 600;font-size: 11px;" > ADD TO CART<g></i>
+        </button>
+       </div>
+      <div class="col-md-12 productact">
+          <button class="button btn-wishlist" >&nbsp;</button>  
+           <button class="button btn-quickview"  >&nbsp;</button>   
+            <button class="button btn-compare" >&nbsp;</button>      
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript">
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        jQuery(document).ready(function () {
+            jQuery(".regular").slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                {
+                    breakpoint: 1300, // tablet breakpoint
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                         autoplaySpeed: 2000,
+                    }
+                },
+                {
+                    breakpoint: 980, // mobile breakpoint
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                         autoplaySpeed: 2000,
+                    }
+                }
+            ]
+            });
+        });
+    });
+</script>

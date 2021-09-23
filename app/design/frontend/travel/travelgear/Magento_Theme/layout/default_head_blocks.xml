@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+         
+         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link src="js/jssor.slider-28.0.0.min.js"/>
+          <link src="js/jquery-1.11.0.min.js"/>
+            <link src="js/jquery.flexslider.js"/>
+         <css src="css/font-awesome.css" rel="stylesheet" type="text/css"  />
+          <css src="css/font-awesome.min.css" rel="stylesheet" type="text/css"  />
+          <css src="css/bootstrap.css" rel="stylesheet" type="text/css"  />
+           <css src="css/bootstrap.min.css" rel="stylesheet" type="text/css"  />
+          <css src="css/slick.css" rel="stylesheet" type="text/css"  />
+          <css src="css/slick-theme.css" rel="stylesheet" type="text/css"  />
+           <css src="css/flexslider.css" rel="stylesheet" type="text/css"  />
+    </head>
+</page>

@@ -1,0 +1,245 @@
+
+	<meta content="charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <style >
+  .flexslider {
+    border: 4px;
+    position: relative;
+}
+li.flex-active-slide {
+    opacity: 1!important;
+}
+.flexslider .slides > li {
+    display: none;
+    opacity: 0.7;
+    -webkit-backface-visibility: hidden;
+    width: 33.3%;
+    float: left;
+    margin: 0;
+    background: url(bg-thumbs.png) no-repeat left top;
+
+}
+.flexslider .slides img {
+    height: auto;
+    -moz-user-select: none;
+    cursor: pointer;
+    transition: all 1s ease;
+     background-color: rgba(0, 0, 0, 0.7);
+}
+div#carousel {
+    width: 90%;
+    margin: auto;
+    margin-top: -21%;
+}
+a.flex-next {
+    right: 0px!important;
+    border: 0;
+}
+a.flex-prev{
+  left: 0px!important;
+}
+span.thumb-title {
+    background: none;
+    bottom: 85px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    text-transform: uppercase;
+}
+span.thumb-desc {
+    background: none;
+    bottom: 58px;
+    font-size: 16px;
+    font-weight: 300;
+    position: absolute;
+    color: #fff;
+}
+.flex-direction-nav a {
+    height: 46px;
+    }
+/*.flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px;
+}
+.flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px;
+}*/
+.text-title {
+    top: 17%;
+    position: absolute;
+    color: white;
+    background: #000;
+    display: block;
+    font-size: 42px;
+    font-weight: 700;
+    padding: 5px 20px;
+    text-align: left;
+    text-transform: uppercase;
+    width: auto;
+    float: left;
+    left: 34px;
+}
+.text-desc {
+    background: #fff;
+    clear: both;
+    color: #333;
+    font-size: 18px;
+    font-weight: 300;
+    width: auto;
+    padding: 10px 20px;
+    float: left;
+    line-height: 100%;
+    text-align: left;
+    top: 68px;
+    position: absolute;
+    left: 34px;
+}
+.col-md-12.title {
+    position: absolute;
+    top: 30%;
+}
+a.readmore {
+    font-size: 18px;
+    font-weight: 400;
+    width: auto;
+    padding: 0 30px;
+    display: block;
+    height: 40px;
+    background: #d90036;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 40px;
+    float: left;
+    clear: both;
+    position: absolute;
+    top: 198px;
+    left: 78px;
+}
+@media only screen and (max-width: 1241px){
+  div#carousel {
+    display: none;
+}
+  }
+@media only screen and (min-width: 1241px) and (max-width: 1530px){
+  a.readmore {
+    top: 171px;
+    left: 67px;
+  }
+  }
+@media only screen and (max-width: 1241px){
+  a.readmore {
+    font-size: 18px;
+    font-weight: 400;
+    width: auto;
+    padding: 0 30px;
+    display: block;
+    height: 40px;
+    background: #d90036;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 40px;
+    float: left;
+    clear: both;
+    position: absolute;
+    top: 177px;
+    left: 36px;
+}
+}
+@media only screen and (max-width: 793px){
+div#contentid {
+    display: none;
+}
+}
+.thumbu-text {
+    margin-left: 18px;
+}
+img.thumbu-img {
+    filter: brightness(40%);
+    outline: 2px solid white;
+    outline-offset: -15px;
+}
+</style>
+<div class="container-fluid" id="contentid">
+  <div id="slider" class="flexslider">
+    <ul class="slides">
+  		<li>
+  	    <img  src="<?php echo $this->getViewFileUrl('Magento_Cms::images/2.jpg'); ?>" />
+        <div class="col-md-12 title">
+            <span class="text-title">Accessories</span>
+            <span class="text-desc">Our online shop is the best place to buy bikes, accessories and other related products. </span>
+            <a href="#" class="readmore">Shop now</a>
+          </div>
+  		</li>
+  		<li>
+  	    <img src="<?php echo $this->getViewFileUrl('Magento_Cms::images/3.jpg'); ?>" />
+         <div class="col-md-12 title">
+            <span class="text-title">Accessories</span>
+            <span class="text-desc">Our online shop is the best place to buy bikes, accessories and other related products. </span>
+            <a href="#" class="readmore">Shop now</a>
+          </div>
+  		</li>
+      <li>
+  	   <img src="<?php echo $this->getViewFileUrl('Magento_Cms::images/4.jpg'); ?>" />
+         <div class="col-md-12 title">
+            <span class="text-title">Accessories</span>
+            <span class="text-desc">Our online shop is the best place to buy bikes, accessories and other related products. </span>
+            <a href="#" class="readmore">Shop now</a>
+          </div>
+  		</li>
+    </ul>
+  </div>
+  <div id="carousel" class="flexslider">
+    <ul class="slides">
+  		<li>
+  	    <img class="thumbu-img" src="<?php echo $this->getViewFileUrl('Magento_Cms::images/2.jpg'); ?>" />
+        <div class="thumbu-text">
+             <span class="thumb-title">Camera  &amp; photo</span>
+             <span class="thumb-desc"> Perfect service reliable shipping.</span>
+         </div>
+  		</li>
+  		<li>
+  	    <img class="thumbu-img" src="<?php echo $this->getViewFileUrl('Magento_Cms::images/3.jpg'); ?>" />
+        <div class="thumbu-text">
+            <span class="thumb-title">Camera  &amp; photo</span>
+             <span class="thumb-desc"> Perfect service reliable shipping.</span>
+       </div>
+  		</li>
+      <li>
+  	   <img class="thumbu-img" src="<?php echo $this->getViewFileUrl('Magento_Cms::images/4.jpg'); ?>" />
+        <div class="thumbu-text">
+            <span class="thumb-title">Camera  &amp; photo</span>
+             <span class="thumb-desc"> Perfect service reliable shipping.</span>
+          </div>
+  		</li>
+    </ul>
+  </div>
+</div>
+  <script type="text/javascript">
+     jQuery(document).ready(function (){
+       jQuery('#carousel').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth:  ( jQuery(window).width()/3.39),
+        asNavFor: '#slider',
+      });
+
+       jQuery('#slider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: true,
+        slideshow: true,
+        sync: "#carousel",
+        start: function(slider) {
+        jQuery('#carousel .slides li img').click(function(event){
+         jQuery('#slider').flexslider("play");
+        });
+         }
+      });
+     
+    });
+   
+  </script>
